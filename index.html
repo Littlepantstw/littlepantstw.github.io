@@ -367,7 +367,7 @@ height:50vh;
     
     
     <article class="index-post">
-        <a class="abstract-title" href = "/2021/03/30/TOI2021/" >
+        <a class="abstract-title" href = "/2021/03/30/a/" >
             
                 <span>TOI 2021 1! 心得文</span>
         </a>
@@ -583,7 +583,7 @@ height:50vh;
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">03/30</span><a class="archive-post-title" href= "/2021/03/30/TOI2021/" >TOI 2021 1! 心得文</a>
+            <span class="archive-post-date">03/30</span><a class="archive-post-title" href= "/2021/03/30/a/" >TOI 2021 1! 心得文</a>
         </li>
     
     </div>
@@ -659,7 +659,22 @@ jsonContent:
     </div>
     <!-- async load share.js -->
      
-    </body>
+    <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+</body>
 </html>
 
 
