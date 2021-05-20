@@ -1,729 +1,509 @@
 <!DOCTYPE html>
 <html lang="en">
-    <!-- title -->
-
-
-
-
-<!-- keywords -->
-
-
-
-
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" >
-    <meta name="author" content="Lieel Pants">
-    <meta name="renderer" content="webkit">
-    <meta name="copyright" content="Lieel Pants">
-    
-    <meta name="keywords" content="hexo,hexo-theme,hexo-blog">
-    
-    <meta name="description" content="">
-    <meta property="og:type" content="website">
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 5.4.0">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.3/css/all.min.css" integrity="sha256-2H3fkXt6FEmrReK448mDVGKb3WW2ZZw35gI7vqHOE4Y=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+
+<script class="next-config" data-name="main" type="application/json">{&quot;hostname&quot;:&quot;example.com&quot;,&quot;root&quot;:&quot;&#x2F;&quot;,&quot;images&quot;:&quot;&#x2F;images&quot;,&quot;scheme&quot;:&quot;Gemini&quot;,&quot;version&quot;:&quot;8.4.0&quot;,&quot;exturl&quot;:false,&quot;sidebar&quot;:{&quot;position&quot;:&quot;left&quot;,&quot;display&quot;:&quot;post&quot;,&quot;padding&quot;:18,&quot;offset&quot;:12},&quot;copycode&quot;:false,&quot;bookmark&quot;:{&quot;enable&quot;:false,&quot;color&quot;:&quot;#222&quot;,&quot;save&quot;:&quot;auto&quot;},&quot;fancybox&quot;:false,&quot;mediumzoom&quot;:false,&quot;lazyload&quot;:false,&quot;pangu&quot;:false,&quot;comments&quot;:{&quot;style&quot;:&quot;tabs&quot;,&quot;active&quot;:null,&quot;storage&quot;:true,&quot;lazyload&quot;:false,&quot;nav&quot;:null},&quot;motion&quot;:{&quot;enable&quot;:true,&quot;async&quot;:false,&quot;transition&quot;:{&quot;post_block&quot;:&quot;fadeIn&quot;,&quot;post_header&quot;:&quot;fadeInDown&quot;,&quot;post_body&quot;:&quot;fadeInDown&quot;,&quot;coll_header&quot;:&quot;fadeInLeft&quot;,&quot;sidebar&quot;:&quot;fadeInUp&quot;}},&quot;prism&quot;:false,&quot;i18n&quot;:{&quot;placeholder&quot;:&quot;Searching...&quot;,&quot;empty&quot;:&quot;We didn&#39;t find any results for the search: ${query}&quot;,&quot;hits_time&quot;:&quot;${hits} results found in ${time} ms&quot;,&quot;hits&quot;:&quot;${hits} results found&quot;}}</script>
+<meta property="og:type" content="website">
 <meta property="og:title" content="Little Pants">
 <meta property="og:url" content="http://example.com/index.html">
 <meta property="og:site_name" content="Little Pants">
 <meta property="og:locale" content="en_US">
-<meta property="article:author" content="Lieel Pants">
+<meta property="article:author" content="Little Pants">
 <meta name="twitter:card" content="summary">
-    <meta http-equiv="Cache-control" content="no-cache">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
-    
-    <title>Little Pants 的耍廢基地</title>
-    <style type="text/css">
-    @font-face {
-        font-family: 'Oswald-Regular';
-        src: url("/font/Oswald-Regular.ttf");
-    }
-
-    body {
-        margin: 0;
-    }
-
-    header,
-    footer,
-    .back-top,
-    .sidebar,
-    .container,
-    .site-intro-meta,
-    .toc-wrapper {
-        display: none;
-    }
-
-    .site-intro {
-        position: relative;
-        z-index: 3;
-        width: 100%;
-        /* height: 50vh; */
-        overflow: hidden;
-    }
-
-    .site-intro-placeholder {
-        position: absolute;
-        z-index: -2;
-        top: 0;
-        left: 0;
-        width: calc(100% + 300px);
-        height: 100%;
-        background: repeating-linear-gradient(-45deg, #444 0, #444 80px, #333 80px, #333 160px);
-        background-position: center center;
-        transform: translate3d(-226px, 0, 0);
-        animation: gradient-move 2.5s ease-out 0s infinite;
-    }
-
-    @keyframes gradient-move {
-        0% {
-            transform: translate3d(-226px, 0, 0);
-        }
-        100% {
-            transform: translate3d(0, 0, 0);
-        }
-    }
-
-</style>
-
-    <link rel="preload" href= "/css/style.css?v=20180824" as="style" onload="this.onload=null;this.rel='stylesheet'" />
-    <link rel="stylesheet" href= "/css/mobile.css?v=20180824" media="(max-width: 980px)">
-    
-    <!-- /*! loadCSS. [c]2017 Filament Group, Inc. MIT License */
-/* This file is meant as a standalone workflow for
-- testing support for link[rel=preload]
-- enabling async CSS loading in browsers that do not support rel=preload
-- applying rel preload css once loaded, whether supported or not.
-*/ -->
-<script>
-(function( w ){
-	"use strict";
-	// rel=preload support test
-	if( !w.loadCSS ){
-		w.loadCSS = function(){};
-	}
-	// define on the loadCSS obj
-	var rp = loadCSS.relpreload = {};
-	// rel=preload feature support test
-	// runs once and returns a function for compat purposes
-	rp.support = (function(){
-		var ret;
-		try {
-			ret = w.document.createElement( "link" ).relList.supports( "preload" );
-		} catch (e) {
-			ret = false;
-		}
-		return function(){
-			return ret;
-		};
-	})();
-
-	// if preload isn't supported, get an asynchronous load by using a non-matching media attribute
-	// then change that media back to its intended value on load
-	rp.bindMediaToggle = function( link ){
-		// remember existing media attr for ultimate state, or default to 'all'
-		var finalMedia = link.media || "all";
-
-		function enableStylesheet(){
-			link.media = finalMedia;
-		}
-
-		// bind load handlers to enable media
-		if( link.addEventListener ){
-			link.addEventListener( "load", enableStylesheet );
-		} else if( link.attachEvent ){
-			link.attachEvent( "onload", enableStylesheet );
-		}
-
-		// Set rel and non-applicable media type to start an async request
-		// note: timeout allows this to happen async to let rendering continue in IE
-		setTimeout(function(){
-			link.rel = "stylesheet";
-			link.media = "only x";
-		});
-		// also enable media after 3 seconds,
-		// which will catch very old browsers (android 2.x, old firefox) that don't support onload on link
-		setTimeout( enableStylesheet, 3000 );
-	};
-
-	// loop through link elements in DOM
-	rp.poly = function(){
-		// double check this to prevent external calls from running
-		if( rp.support() ){
-			return;
-		}
-		var links = w.document.getElementsByTagName( "link" );
-		for( var i = 0; i < links.length; i++ ){
-			var link = links[ i ];
-			// qualify links to those with rel=preload and as=style attrs
-			if( link.rel === "preload" && link.getAttribute( "as" ) === "style" && !link.getAttribute( "data-loadcss" ) ){
-				// prevent rerunning on link
-				link.setAttribute( "data-loadcss", true );
-				// bind listeners to toggle media back
-				rp.bindMediaToggle( link );
-			}
-		}
-	};
-
-	// if unsupported, run the polyfill
-	if( !rp.support() ){
-		// run once at least
-		rp.poly();
-
-		// rerun poly on an interval until onload
-		var run = w.setInterval( rp.poly, 500 );
-		if( w.addEventListener ){
-			w.addEventListener( "load", function(){
-				rp.poly();
-				w.clearInterval( run );
-			} );
-		} else if( w.attachEvent ){
-			w.attachEvent( "onload", function(){
-				rp.poly();
-				w.clearInterval( run );
-			} );
-		}
-	}
 
 
-	// commonjs
-	if( typeof exports !== "undefined" ){
-		exports.loadCSS = loadCSS;
-	}
-	else {
-		w.loadCSS = loadCSS;
-	}
-}( typeof global !== "undefined" ? global : this ) );
-</script>
+<link rel="canonical" href="http://example.com/">
 
-    <link rel="icon" href= "/assets/favicon.ico" />
-    <link rel="preload" href="https://cdn.jsdelivr.net/npm/webfontloader@1.6.28/webfontloader.min.js" as="script" />
-    <link rel="preload" href="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js" as="script" />
-    <link rel="preload" href="/scripts/main.js" as="script" />
-    <link rel="preload" as="font" href="/font/Oswald-Regular.ttf" crossorigin>
-    <link rel="preload" as="font" href="https://at.alicdn.com/t/font_327081_1dta1rlogw17zaor.woff" crossorigin>
-    
-    <!-- fancybox -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.2.5/jquery.fancybox.min.js" defer></script>
-    <!-- 百度统计  -->
-    
-    <!-- 谷歌统计  -->
-    
-<meta name="generator" content="Hexo 5.4.0"></head>
 
-    
-        <body class="home-body">
-    
-    
-<header class="header index-header">
 
-    <div class="read-progress"></div>
-    <div class="header-sidebar-menu">&#xe775;</div>
-    <!-- post页的toggle banner  -->
-    
-    <a class="home-link" href=/>Little Pants 的耍廢基地</a>
-</header>
-    <div class="wrapper">
-        <div class="site-intro" style="
+<script class="next-config" data-name="page" type="application/json">{&quot;sidebar&quot;:&quot;&quot;,&quot;isHome&quot;:true,&quot;isPost&quot;:false,&quot;lang&quot;:&quot;en&quot;,&quot;comments&quot;:&quot;&quot;,&quot;permalink&quot;:&quot;&quot;,&quot;path&quot;:&quot;index.html&quot;,&quot;title&quot;:&quot;&quot;}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">&quot;&quot;</script>
+<title>Little Pants</title><script src="/js/config.js"></script>
+  
 
 
 
 
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+</head>
 
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
 
-
-height:50vh;
-">
-    
-    <!-- 主页  -->
-    
-    
-    <!-- 文章页  -->
-            
-    <div class="site-intro-placeholder"></div>
-    <div class="site-intro-img" style="background-image: url(/intro/yukino.jpg)"></div>
-    <div class="site-intro-meta">
-        <!-- 标题  -->
-        <h1 class="intro-title">
-            <!-- 主页  -->
-            
-            Little Pants 的耍廢基地
-            <!-- 文章页  -->
-            
-        </h1>
-        <!-- 副标题 -->
-        <p class="intro-subtitle">
-            <!-- 主页副标题  -->
-            
-            
-                it's better to burn out than to fade away
-            
-            <!-- 文章页  -->
-            
-        </p>
-        <!-- 文章页meta -->
-        
-    </div>
-</div>
-        <script>
- 
-  // get user agent
-  var browser = {
-    versions: function () {
-      var u = window.navigator.userAgent;
-      return {
-        userAgent: u,
-        trident: u.indexOf('Trident') > -1, //IE内核
-        presto: u.indexOf('Presto') > -1, //opera内核
-        webKit: u.indexOf('AppleWebKit') > -1, //苹果、谷歌内核
-        gecko: u.indexOf('Gecko') > -1 && u.indexOf('KHTML') == -1, //火狐内核
-        mobile: !!u.match(/AppleWebKit.*Mobile.*/), //是否为移动终端
-        ios: !!u.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/), //ios终端
-        android: u.indexOf('Android') > -1 || u.indexOf('Linux') > -1, //android终端或者uc浏览器
-        iPhone: u.indexOf('iPhone') > -1 || u.indexOf('Mac') > -1, //是否为iPhone或者安卓QQ浏览器
-        iPad: u.indexOf('iPad') > -1, //是否为iPad
-        webApp: u.indexOf('Safari') == -1, //是否为web应用程序，没有头部与底部
-        weixin: u.indexOf('MicroMessenger') == -1, //是否为微信浏览器
-        uc: u.indexOf('UCBrowser') > -1 //是否为android下的UC浏览器
-      };
-    }()
-  }
-  console.log("userAgent:" + browser.versions.userAgent);
-
-  // callback
-  function fontLoaded() {
-    console.log('font loaded');
-    if (document.getElementsByClassName('site-intro-meta')) {
-      document.getElementsByClassName('intro-title')[0].classList.add('intro-fade-in');
-      document.getElementsByClassName('intro-subtitle')[0].classList.add('intro-fade-in');
-      var postIntros = document.getElementsByClassName('post-intros')[0]
-      if (postIntros) {
-        postIntros.classList.add('post-fade-in');
-      }
-    }
-  }
-
-  // UC不支持跨域，所以直接显示
-  function asyncCb(){
-    if (browser.versions.uc) {
-      console.log("UCBrowser");
-      fontLoaded();
-    } else {
-      WebFont.load({
-        custom: {
-          families: ['Oswald-Regular']
-        },
-        loading: function () {  //所有字体开始加载
-          // console.log('loading');
-        },
-        active: function () {  //所有字体已渲染
-          fontLoaded();
-        },
-        inactive: function () { //字体预加载失败，无效字体或浏览器不支持加载
-          console.log('inactive: timeout');
-          fontLoaded();
-        },
-        timeout: 5000 // Set the timeout to two seconds
-      });
-    }
-  }
-
-  function asyncErr(){
-    console.warn('script load from CDN failed, will load local script')
-  }
-
-  // load webfont-loader async, and add callback function
-  function async(u, cb, err) {
-    var d = document, t = 'script',
-      o = d.createElement(t),
-      s = d.getElementsByTagName(t)[0];
-    o.src = u;
-    if (cb) { o.addEventListener('load', function (e) { cb(null, e); }, false); }
-    if (err) { o.addEventListener('error', function (e) { err(null, e); }, false); }
-    s.parentNode.insertBefore(o, s);
-  }
-
-  var asyncLoadWithFallBack = function(arr, success, reject) {
-      var currReject = function(){
-        reject()
-        arr.shift()
-        if(arr.length)
-          async(arr[0], success, currReject)
-        }
-
-      async(arr[0], success, currReject)
-  }
-
-  asyncLoadWithFallBack([
-    "https://cdn.jsdelivr.net/npm/webfontloader@1.6.28/webfontloader.min.js", 
-    "https://cdn.bootcss.com/webfont/1.6.28/webfontloader.js",
-    "/lib/webfontloader.min.js"
-  ], asyncCb, asyncErr)
-</script>        
-        <img class="loading" src="/assets/loading.svg" style="display: block; margin: 6rem auto 0 auto; width: 6rem; height: 6rem;" />
-        <div class="container container-unloaded">
-            <main class="main index-page">
-    
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href = "/2021/03/31/dev-setting/" >
-            
-                <span>在Windows系統體驗原味vim</span>
-        </a>
-        <div class="abstract-content">
-            去1!學到的酷東西
-        </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2021/03/31</span>
-            </div>
-            <!-- tags  -->
-            
-            <div class= abstract-tags >
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "競程隨筆">競程隨筆</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "環境設定">環境設定</a>
-    
-</div>
-            
-        </div>
-    </article>
-    
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href = "/2021/03/30/a/" >
-            
-                <span>TOI 2021 1! 心得文</span>
-        </a>
-        <div class="abstract-content">
-            關於一個小廢物不小心進了1!
-        </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2021/03/30</span>
-            </div>
-            <!-- tags  -->
-            
-            <div class= abstract-tags >
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "TOI">TOI</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "競程隨筆">競程隨筆</a>
-    
-</div>
-            
-        </div>
-    </article>
-    
-    <!-- paginator  -->
-    
-</main>
-            <!-- profile -->
-            
-            <div class="profile">
-    <img class="profile-avatar" alt="avatar" src= /avatar/Gura.jpg >
-    <div class="profile-name">Little Pants</div>
-    
-    
-    <div class="profile-social">
-        
-    
-        
-            
-                <a href="mailto:gilbert12.tw@gmail.com" class="iconfont-archer email" title=email ></a>
-            
-        
-    
-        
-            
-                <a href="//github.com/littlepantstw" class="iconfont-archer github" target="_blank" title=github></a>
-            
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-
-    </div>
-    
-    
-        <div class="friends">
-            <div>FRIENDS</div>
-            
-                
-                    <span>
-                        <a href= //iceysheep157.github.io/ target="_black">iceylemon</a>
-                    </span>
-                
-            
-        </div>
-    
-    
-        <div class="about-me">
-            <a href = "/about" >ABOUT ME</a>
-        </div>
-    
-</div>
-            
-        </div>
-        <footer class="footer footer-unloaded">
-    <!-- social  -->
-    
-    <div class="social">
-        
-    
-        
-            
-                <a href="mailto:gilbert12.tw@gmail.com" class="iconfont-archer email" title=email ></a>
-            
-        
-    
-        
-            
-                <a href="//github.com/littlepantstw" class="iconfont-archer github" target="_blank" title=github></a>
-            
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-
-    </div>
-    
-    <!-- powered by Hexo  -->
-    <div class="copyright">
-        <span id="hexo-power">Powered by <a href="https://hexo.io/" target="_blank">Hexo</a></span><span class="iconfont-archer power">&#xe635;</span><span id="theme-info">theme <a href="https://github.com/fi3ework/hexo-theme-archer" target="_blank">Archer</a></span>
-    </div>
-    <!-- 不蒜子  -->
-    
-    <div class="busuanzi-container">
-    
-     
-    <span id="busuanzi_container_site_pv">PV: <span id="busuanzi_value_site_pv"></span> :)</span>
-    
-    </div>
-    
-</footer>
-    </div>
-    <!-- toc -->
-    
-    <div class="back-top iconfont-archer">&#xe639;</div>
-    <div class="sidebar sidebar-hide">
-    <ul class="sidebar-tabs sidebar-tabs-active-0">
-        <li class="sidebar-tab-archives"><span class="iconfont-archer">&#xe67d;</span><span class="tab-name">Archive</span></li>
-        <li class="sidebar-tab-tags"><span class="iconfont-archer">&#xe61b;</span><span class="tab-name">Tag</span></li>
-        <li class="sidebar-tab-categories"><span class="iconfont-archer">&#xe666;</span><span class="tab-name">Cate</span></li>
-    </ul>
-    <div class="sidebar-content sidebar-content-show-archive">
-          <div class="sidebar-panel-archives">
-    <!-- 在ejs中将archive按照时间排序 -->
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    <div class="total-and-search">
-        <div class="total-archive">
-        Total : 2
-        </div>
-        <!-- search  -->
-        
-    </div>
-    
-    <div class="post-archive">
-    
-    
-    
-    
-    <div class="archive-year"> 2021 </div>
-    <ul class="year-list">
-    
-    
-        <li class="archive-post-item">
-            <span class="archive-post-date">03/31</span><a class="archive-post-title" href= "/2021/03/31/dev-setting/" >在Windows系統體驗原味vim</a>
-        </li>
-    
-    
-        <li class="archive-post-item">
-            <span class="archive-post-date">03/30</span><a class="archive-post-title" href= "/2021/03/30/a/" >TOI 2021 1! 心得文</a>
-        </li>
-    
+  <main class="main">
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="Toggle navigation bar" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
     </div>
   </div>
-        <div class="sidebar-panel-tags">
-    <div class="sidebar-tags-name">
-    
-        <span class="sidebar-tag-name" data-tags="TOI"><span class="iconfont-archer">&#xe606;</span>TOI</span>
-    
-        <span class="sidebar-tag-name" data-tags="競程隨筆"><span class="iconfont-archer">&#xe606;</span>競程隨筆</span>
-    
-        <span class="sidebar-tag-name" data-tags="環境設定"><span class="iconfont-archer">&#xe606;</span>環境設定</span>
-    
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <h1 class="site-title">Little Pants</h1>
+      <i class="logo-line"></i>
+    </a>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
     </div>
-    <div class="iconfont-archer sidebar-tags-empty">&#xe678;</div>
-    <div class="tag-load-fail" style="display: none; color: #ccc; font-size: 0.6rem;">
-    缺失模块。<br/>
-    1、请确保node版本大于6.2<br/>
-    2、在博客根目录（注意不是archer根目录）执行以下命令：<br/>
-    <span style="color: #f75357; font-size: 1rem; line-height: 2rem;">npm i hexo-generator-json-content --save</span><br/>
-    3、在根目录_config.yml里添加配置：
-    <pre style="color: #787878; font-size: 0.6rem;">
-jsonContent:
-  meta: false
-  pages: false
-  posts:
-    title: true
-    date: true
-    path: true
-    text: false
-    raw: false
-    content: false
-    slug: false
-    updated: false
-    comments: false
-    link: false
-    permalink: false
-    excerpt: false
-    categories: true
-    tags: true</pre>
-    </div> 
-    <div class="sidebar-tags-list"></div>
+  </div>
 </div>
-        <div class="sidebar-panel-categories">
-    <div class="sidebar-categories-name">
-    
-    </div>
-    <div class="iconfont-archer sidebar-categories-empty">&#xe678;</div>
-    <div class="sidebar-categories-list"></div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu">
+        <li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>Home</a></li>
+        <li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>About</a></li>
+        <li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>Tags</a></li>
+        <li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>Categories</a></li>
+        <li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>Archives</a></li>
+  </ul>
+</nav>
+
+
+
+
 </div>
+        
+  
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-overview-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          Table of Contents
+        </li>
+        <li class="sidebar-nav-overview">
+          Overview
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author site-overview-item animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">Little Pants</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+<div class="site-state-wrap site-overview-item animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">2</span>
+          <span class="site-state-item-name">posts</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-tags">
+        <span class="site-state-item-count">3</span>
+        <span class="site-state-item-name">tags</span>
+      </div>
+  </nav>
+</div>
+
+
+
+        </div>
+      </div>
     </div>
-</div> 
-    <script>
-    var siteMeta = {
-        root: "/",
-        author: "Lieel Pants"
-    }
-</script>
-    <!-- CDN failover -->
-    <script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"></script>
-    <script type="text/javascript">
-        if (typeof window.$ === 'undefined')
-        {
-            console.warn('jquery load from jsdelivr failed, will load local script')
-            document.write('<script src="/lib/jquery.min.js">\x3C/script>')
-        }
-    </script>
-    <script src="/scripts/main.js"></script>
-    <!-- algolia -->
+  </aside>
+  <div class="sidebar-dimmer"></div>
+
+
+    </header>
+
     
-    <!-- busuanzi  -->
+  <div class="back-to-top" role="button" aria-label="Back to top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+    <div class="main-inner index posts-expand">
+
     
-    <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2021/03/31/dev-setting/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Little Pants">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Little Pants">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2021/03/31/dev-setting/" class="post-title-link" itemprop="url">在Windows系統體驗原味vim</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+
+      <time title="Created: 2021-03-31 14:46:03" itemprop="dateCreated datePublished" datetime="2021-03-31T14:46:03+08:00">2021-03-31</time>
+    </span>
+      <span class="post-meta-item">
+        <span class="post-meta-item-icon">
+          <i class="far fa-calendar-check"></i>
+        </span>
+        <span class="post-meta-item-text">Edited on</span>
+        <time title="Modified: 2021-05-02 12:29:15" itemprop="dateModified" datetime="2021-05-02T12:29:15+08:00">2021-05-02</time>
+      </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
     
-    <!-- CNZZ  -->
     
+    
+    <div class="post-body" itemprop="articleBody">
+          <h2 id="前言">前言</h2>
+<p>我之前為了用vim在電腦灌了ubuntu，但如果要打osu!會很不方便。所以又試了gvim，但怎麼都用不好。去1!的時候遇到了南一中電神<u>羅文謙</u>，用了超簡單的方法就能在windows上用vim，還可以自訂各種主題和背景，這麼香能不用嗎?</p>
+<h2 id="先放個成果圖">先放個成果圖</h2>
+<p>香 <img src="https://i.imgur.com/4MruAWH.jpg" /></p>
+<h2 id="wsl">WSL</h2>
+<p>首先要裝的就是WSL，它可以讓你把Linux作為Windows的子系統。</p>
+<p>這邊簡單說下要怎麼裝，雖然網路上應該很多教學了。</p>
+<h3 id="啟用windows-子系統-linux-版選用功能">啟用「Windows 子系統 Linux 版」選用功能</h3>
+<p><code>Windows設定&gt;&gt;應用程式與功能</code></p>
+<p>打開後滑到最底下</p>
+<p>會看到</p>
+<p><img src="https://i.imgur.com/ac9ZJST.png" /></p>
+<p>點選程式和功能</p>
+<p>接著再點選左邊的<code>開啟或關閉Windows功能</code></p>
+<p><img src="https://i.imgur.com/FQS97Ab.png" /></p>
+<p>把<code>Windows子系統Linux版</code> 和 <code>虛擬機平台</code> 勾選起來就可以按下確定了</p>
+<h3 id="以系統管理員身分開啟-powershell">以系統管理員身分開啟 PowerShell</h3>
+<p>執行以下兩個指令</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">dism.exe /online /enable-feature /featurename:Microsoft-Windows-Subsystem-Linux /all /norestart</span><br><span class="line">dism.exe /online /enable-feature /featurename:VirtualMachinePlatform /all /norestart</span><br></pre></td></tr></table></figure>
+<p>接著重新啟動你的電腦</p>
+<h3 id="將-wsl-2-設定為預設版本">將 WSL 2 設定為預設版本</h3>
+<p>重啟後再次開啟PowerShell，並執行</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">wsl --set-default-version 2</span><br></pre></td></tr></table></figure>
+<h3 id="安裝-linux-發行版本">安裝 Linux 發行版本</h3>
+<p>這個步驟非常簡單，直接去Microsoft Store搜尋就好</p>
+<p>我這邊會使用Ubuntu做介紹</p>
+<p>第一次使用可能會需要設定帳號密碼</p>
+<h2 id="windows-terminals">Windows Terminals</h2>
+<p>我之所以不太喜歡用Windows的一個原因就是他的終端機太醜了，沒想到微軟也很有自知之明，所以推出了這款<code>Windows Terminals</code></p>
+<p>下載方式也很簡單，去Microsoft Store搜尋並安裝就行了</p>
+<p><img src="https://i.imgur.com/6Qd5lY3.png" /></p>
+<p>下載完後，就可以用它來開啟我們的Ubuntu(或其他用到終端介面的東西都可以)</p>
+<p>點選下箭頭應該可以看到一些選項</p>
+<p><img src="https://i.imgur.com/NtO1Esx.png" /></p>
+<p>如果沒看到想要的選項的話可以試試看重新啟動</p>
+<p>打開之後就可以像使用Ubuntu一樣盡情的打指令</p>
+<p>首先當然是去下載 vim</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sudo apt install vim</span><br><span class="line">sudo apt install vim-gtk3</span><br></pre></td></tr></table></figure>
+<p>然後就可以使用拉</p>
+<p><del>完結灑花!</del></p>
+<h2 id="資料存放">資料存放</h2>
+<p>你可能會好奇，你在Ubuntu存放的檔案會放到哪裡去</p>
+<p>預設會放在 <code>C:\Users\'使用者名稱'</code></p>
+<p><code>'使用者名稱'</code>是你Windows的使用者名稱</p>
+<p>所以你也可以在Windows開啟用Ubuntu編輯的檔案</p>
+<h2 id="程式碼複製和-.vimrc-配置">程式碼複製和 <code>.vimrc</code> 配置</h2>
+<p>你可能會想要複製vim中的程式碼</p>
+<p>你只需要在<code>.vimrc</code>檔案中加上最後面幾行(" WSL yank support這一行以下)</p>
+<p>然後複製的時候打上 <code>:%y</code> 就可以了(這是一次複製全部程式碼)</p>
+<p>這邊放上我的<code>.vimrc</code>給大家參考</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">set</span> nu</span><br><span class="line"><span class="built_in">set</span> ru</span><br><span class="line"><span class="built_in">set</span> ai</span><br><span class="line"><span class="built_in">set</span> tabstop=4</span><br><span class="line"><span class="built_in">set</span> mouse=a</span><br><span class="line"><span class="built_in">set</span> showmode</span><br><span class="line"><span class="built_in">set</span> showcmd</span><br><span class="line"><span class="built_in">set</span> whichwrap+=&lt;,&gt;,[,]</span><br><span class="line">inoremap &#123;&lt;CR&gt; &#123;&lt;CR&gt;&#125;&lt;Esc&gt;ko&lt;BS&gt;</span><br><span class="line">nnoremap d&lt;CR&gt; :r /mnt/c/Users/LittlePants/codebook/default.cpp &lt;CR&gt;</span><br><span class="line">nnoremap c&lt;CR&gt; :r /mnt/c/Users/LittlePants/codebook/</span><br><span class="line">nnoremap y&lt;CR&gt; :%y&lt;CR&gt;</span><br><span class="line"><span class="built_in">set</span> autowrite</span><br><span class="line"><span class="built_in">set</span> smartindent</span><br><span class="line"></span><br><span class="line">map&lt;F10&gt; :!clear &amp;&amp; g++ -std=c++14 -Wall -g % &amp;&amp; gdb a.out&lt;CR&gt;</span><br><span class="line">autocmd vimEnter *.cpp map &lt;F9&gt; :w &lt;CR&gt; :!clear ; g++ --std=c++17 %; <span class="keyword">if</span> [ -f a.out ]; <span class="keyword">then</span> time ./a.out; rm a.out; <span class="keyword">fi</span> &lt;CR&gt;</span><br><span class="line"></span><br><span class="line"><span class="string">&quot; WSL yank support</span></span><br><span class="line"><span class="string">let s:clip = &#x27;/mnt/c/Windows/System32/clip.exe&#x27;  &quot;</span> change this path according to your mount point</span><br><span class="line"><span class="keyword">if</span> executable(s:clip)</span><br><span class="line">    augroup WSLYank</span><br><span class="line">    autocmd!</span><br><span class="line">    autocmd TextYankPost * <span class="keyword">if</span> v:event.operator ==<span class="comment"># &#x27;y&#x27; | call system(s:clip, @0) | endif</span></span><br><span class="line">    augroup END</span><br><span class="line">endif</span><br></pre></td></tr></table></figure>
+<h2 id="windows-terminal美化">Windows Terminal美化</h2>
+<p>雖然Windows Terminal原本就不錯看了</p>
+<p>但還是可以更進一步美化</p>
+<p>按下<code>Ctrl + ,</code>開啟設定</p>
+<p>它會開啟一個叫<code>setting.json</code>的檔案</p>
+<p>裡面就可以自訂非常多東西，包括字體、顏色、背景等等</p>
+<p>這邊放上我的配置</p>
+<h3 id="請大家不要直接複製貼上">請大家不要直接複製貼上!!!</h3>
+<p>有些東西是不能直接抄的</p>
+<p>這邊和大家說一下可以改的地方</p>
+<p><code>"defaults":</code> 先介紹在這下面可以調整的</p>
+<p><code>"backgroundImage"</code> 背景圖片位置</p>
+<p><code>"backgroundImageOpacity"</code> 背景圖片不透明度</p>
+<p><code>"colorScheme"</code> 這是你要自訂的字體顏色主題名稱(下面會提到)</p>
+<p>還有一些像是<code>"font size"</code>之類的東西就不贅述了</p>
+<p>接下來是<code>"lists"</code></p>
+<p>這下面放的是你的終端機資料 windows terminals應該會自動幫你處理好</p>
+<p>不太需要改</p>
+<p>最後是<code>"schemes"</code></p>
+<p>這裡就是可以自訂主題的地方</p>
+<p>這邊就是可以copy paste的地方了</p>
+<p>你可以放很多不同的主題進去</p>
+<p>但一次只能用一個</p>
+<p>要到上面提到的<code>"colorScheme"</code>填上你想要的scheme的<code>"name"</code></p>
+<p><a target="_blank" rel="noopener" href="https://docs.microsoft.com/zh-tw/windows/terminal/customize-settings/color-schemes">color scheme的推薦配置</a></p>
+<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br><span class="line">130</span><br><span class="line">131</span><br><span class="line">132</span><br><span class="line">133</span><br><span class="line">134</span><br><span class="line">135</span><br><span class="line">136</span><br><span class="line">137</span><br><span class="line">138</span><br><span class="line">139</span><br><span class="line">140</span><br><span class="line">141</span><br><span class="line">142</span><br><span class="line">143</span><br><span class="line">144</span><br><span class="line">145</span><br><span class="line">146</span><br><span class="line">147</span><br><span class="line">148</span><br><span class="line">149</span><br><span class="line">150</span><br><span class="line">151</span><br><span class="line">152</span><br><span class="line">153</span><br><span class="line">154</span><br><span class="line">155</span><br><span class="line">156</span><br><span class="line">157</span><br><span class="line">158</span><br><span class="line">159</span><br><span class="line">160</span><br><span class="line">161</span><br><span class="line">162</span><br><span class="line">163</span><br><span class="line">164</span><br><span class="line">165</span><br><span class="line">166</span><br><span class="line">167</span><br><span class="line">168</span><br><span class="line">169</span><br><span class="line">170</span><br><span class="line">171</span><br><span class="line">172</span><br><span class="line">173</span><br><span class="line">174</span><br><span class="line">175</span><br><span class="line">176</span><br><span class="line">177</span><br><span class="line">178</span><br><span class="line">179</span><br><span class="line">180</span><br><span class="line">181</span><br><span class="line">182</span><br><span class="line">183</span><br><span class="line">184</span><br><span class="line">185</span><br><span class="line">186</span><br><span class="line">187</span><br><span class="line">188</span><br><span class="line">189</span><br><span class="line">190</span><br><span class="line">191</span><br><span class="line">192</span><br><span class="line">193</span><br><span class="line">194</span><br><span class="line">195</span><br><span class="line">196</span><br><span class="line">197</span><br><span class="line">198</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// It should still be usable in newer versions, but newer versions might have additional</span></span><br><span class="line"><span class="comment">// settings, help text, or changes that you will not see unless you clear this file</span></span><br><span class="line"><span class="comment">// and let us generate a new one for you.</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// To view the default settings, hold &quot;alt&quot; while clicking on the &quot;Settings&quot; button.</span></span><br><span class="line"><span class="comment">// For documentation on these settings, see: https://aka.ms/terminal-documentation</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="attr">&quot;$schema&quot;</span>: <span class="string">&quot;https://aka.ms/terminal-profiles-schema&quot;</span>,</span><br><span class="line"></span><br><span class="line">    <span class="attr">&quot;defaultProfile&quot;</span>: <span class="string">&quot;&#123;07b52e3e-de2c-5db4-bd2d-ba144ed6c273&#125;&quot;</span>,</span><br><span class="line"></span><br><span class="line">    <span class="comment">// You can add more global application settings here.</span></span><br><span class="line">    <span class="comment">// To learn more about global settings, visit https://aka.ms/terminal-global-settings</span></span><br><span class="line"></span><br><span class="line">    <span class="comment">// If enabled, selections are automatically copied to your clipboard.</span></span><br><span class="line">    <span class="attr">&quot;copyOnSelect&quot;</span>: <span class="literal">false</span>,</span><br><span class="line"></span><br><span class="line">    <span class="comment">// If enabled, formatted data is also copied to your clipboard</span></span><br><span class="line">    <span class="attr">&quot;copyFormatting&quot;</span>: <span class="literal">false</span>,</span><br><span class="line"></span><br><span class="line">    <span class="comment">// A profile specifies a command to execute paired with information about how it should look and feel.</span></span><br><span class="line">    <span class="comment">// Each one of them will appear in the &#x27;New Tab&#x27; dropdown,</span></span><br><span class="line">    <span class="comment">//   and can be invoked from the commandline with `wt.exe -p xxx`</span></span><br><span class="line">    <span class="comment">// To learn more about profiles, visit https://aka.ms/terminal-profile-settings</span></span><br><span class="line">    <span class="attr">&quot;profiles&quot;</span>:</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="attr">&quot;defaults&quot;</span>:</span><br><span class="line">        &#123;</span><br><span class="line">        <span class="attr">&quot;acrylicOpacity&quot;</span> : <span class="number">0.3</span>,</span><br><span class="line">        <span class="attr">&quot;backgroundImage&quot;</span> : <span class="string">&quot;C:\\Users\\LittlePants\\Desktop\\wallpaper\\miku.jpg&quot;</span>,</span><br><span class="line">        <span class="attr">&quot;backgroundImageOpacity&quot;</span> : <span class="number">0.30</span>,</span><br><span class="line">        <span class="attr">&quot;backgroundImageStretchMode&quot;</span> : <span class="string">&quot;uniformToFill&quot;</span>,</span><br><span class="line">        <span class="attr">&quot;closeOnExit&quot;</span> : <span class="literal">true</span>,</span><br><span class="line">        <span class="attr">&quot;colorScheme&quot;</span> : <span class="string">&quot;Dracula&quot;</span>,</span><br><span class="line">        <span class="attr">&quot;cursorColor&quot;</span> : <span class="string">&quot;#ffffff&quot;</span>,</span><br><span class="line">        <span class="attr">&quot;cursorHeight&quot;</span> : <span class="number">25</span>,</span><br><span class="line">        <span class="attr">&quot;cursorShape&quot;</span> : <span class="string">&quot;bar&quot;</span>,</span><br><span class="line">        <span class="attr">&quot;fontFace&quot;</span> : <span class="string">&quot;Delugia Nerd Font&quot;</span>,</span><br><span class="line">        <span class="attr">&quot;fontSize&quot;</span> : <span class="number">15</span>,</span><br><span class="line">        <span class="attr">&quot;guid&quot;</span> : <span class="string">&quot;&#123;79285a8e-036c-446f-8a9c-78994e34bf78&#125;&quot;</span>,</span><br><span class="line">        <span class="attr">&quot;historySize&quot;</span> : <span class="number">9001</span>,</span><br><span class="line">        <span class="attr">&quot;icon&quot;</span> : <span class="string">&quot;ms-appdata:///roaming/pwsh-32.png&quot;</span>,</span><br><span class="line">        <span class="attr">&quot;name&quot;</span> : <span class="string">&quot;PowerShell with Unicorn&quot;</span>,</span><br><span class="line">        <span class="attr">&quot;padding&quot;</span> : <span class="string">&quot;0, 0, 0, 0&quot;</span>,</span><br><span class="line">        <span class="attr">&quot;snapOnInput&quot;</span> : <span class="literal">true</span>,</span><br><span class="line">        <span class="attr">&quot;startingDirectory&quot;</span> : <span class="string">&quot;%USERPROFILE%&quot;</span>,</span><br><span class="line">        <span class="attr">&quot;useAcrylic&quot;</span> : <span class="literal">false</span></span><br><span class="line">        &#125;,</span><br><span class="line">        <span class="attr">&quot;list&quot;</span>:</span><br><span class="line">        [</span><br><span class="line">            &#123;</span><br><span class="line">                <span class="comment">// Make changes here to the powershell.exe profile.</span></span><br><span class="line">                <span class="attr">&quot;guid&quot;</span>: <span class="string">&quot;&#123;61c54bbd-c2c6-5271-96e7-009a87ff44bf&#125;&quot;</span>,</span><br><span class="line">                <span class="attr">&quot;name&quot;</span>: <span class="string">&quot;Windows PowerShell&quot;</span>,</span><br><span class="line">                <span class="attr">&quot;commandline&quot;</span>: <span class="string">&quot;powershell.exe&quot;</span>,</span><br><span class="line">                <span class="attr">&quot;hidden&quot;</span>: <span class="literal">false</span></span><br><span class="line">            &#125;,</span><br><span class="line">            &#123;</span><br><span class="line">                <span class="comment">// Make changes here to the cmd.exe profile.</span></span><br><span class="line">                <span class="attr">&quot;guid&quot;</span>: <span class="string">&quot;&#123;0caa0dad-35be-5f56-a8ff-afceeeaa6101&#125;&quot;</span>,</span><br><span class="line">                <span class="attr">&quot;name&quot;</span>: <span class="string">&quot;命令提示字元&quot;</span>,</span><br><span class="line">                <span class="attr">&quot;commandline&quot;</span>: <span class="string">&quot;cmd.exe&quot;</span>,</span><br><span class="line">                <span class="attr">&quot;hidden&quot;</span>: <span class="literal">false</span></span><br><span class="line">            &#125;,</span><br><span class="line">            &#123;</span><br><span class="line">                <span class="attr">&quot;guid&quot;</span>: <span class="string">&quot;&#123;b453ae62-4e3d-5e58-b989-0a998ec441b8&#125;&quot;</span>,</span><br><span class="line">                <span class="attr">&quot;hidden&quot;</span>: <span class="literal">false</span>,</span><br><span class="line">                <span class="attr">&quot;name&quot;</span>: <span class="string">&quot;Azure Cloud Shell&quot;</span>,</span><br><span class="line">                <span class="attr">&quot;source&quot;</span>: <span class="string">&quot;Windows.Terminal.Azure&quot;</span></span><br><span class="line">            &#125;,</span><br><span class="line">            &#123;</span><br><span class="line">                <span class="attr">&quot;guid&quot;</span>: <span class="string">&quot;&#123;07b52e3e-de2c-5db4-bd2d-ba144ed6c273&#125;&quot;</span>,</span><br><span class="line">                <span class="attr">&quot;hidden&quot;</span>: <span class="literal">false</span>,</span><br><span class="line">                <span class="attr">&quot;name&quot;</span>: <span class="string">&quot;Ubuntu-20.04&quot;</span>,</span><br><span class="line">                <span class="attr">&quot;source&quot;</span>: <span class="string">&quot;Windows.Terminal.Wsl&quot;</span></span><br><span class="line">            &#125;</span><br><span class="line">        ]</span><br><span class="line">    &#125;,</span><br><span class="line"></span><br><span class="line">    <span class="comment">// Add custom color schemes to this array.</span></span><br><span class="line">    <span class="comment">// To learn more about color schemes, visit https://aka.ms/terminal-color-schemes</span></span><br><span class="line">    <span class="attr">&quot;schemes&quot;</span>: [</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="attr">&quot;name&quot;</span>: <span class="string">&quot;Breeze&quot;</span>,</span><br><span class="line">            <span class="attr">&quot;black&quot;</span>: <span class="string">&quot;#31363b&quot;</span>,</span><br><span class="line">            <span class="attr">&quot;red&quot;</span>: <span class="string">&quot;#ed1515&quot;</span>,</span><br><span class="line">            <span class="attr">&quot;green&quot;</span>: <span class="string">&quot;#11d116&quot;</span>,</span><br><span class="line">            <span class="attr">&quot;yellow&quot;</span>: <span class="string">&quot;#f67400&quot;</span>,</span><br><span class="line">            <span class="attr">&quot;blue&quot;</span>: <span class="string">&quot;#1d99f3&quot;</span>,</span><br><span class="line">            <span class="attr">&quot;purple&quot;</span>: <span class="string">&quot;#9b59b6&quot;</span>,</span><br><span class="line">            <span class="attr">&quot;cyan&quot;</span>: <span class="string">&quot;#1abc9c&quot;</span>,</span><br><span class="line">            <span class="attr">&quot;white&quot;</span>: <span class="string">&quot;#eff0f1&quot;</span>,</span><br><span class="line">            <span class="attr">&quot;brightBlack&quot;</span>: <span class="string">&quot;#7f8c8d&quot;</span>,</span><br><span class="line">            <span class="attr">&quot;brightRed&quot;</span>: <span class="string">&quot;#c0392b&quot;</span>,</span><br><span class="line">            <span class="attr">&quot;brightGreen&quot;</span>: <span class="string">&quot;#1cdc9a&quot;</span>,</span><br><span class="line">            <span class="attr">&quot;brightYellow&quot;</span>: <span class="string">&quot;#fdbc4b&quot;</span>,</span><br><span class="line">            <span class="attr">&quot;brightBlue&quot;</span>: <span class="string">&quot;#3daee9&quot;</span>,</span><br><span class="line">            <span class="attr">&quot;brightPurple&quot;</span>: <span class="string">&quot;#8e44ad&quot;</span>,</span><br><span class="line">            <span class="attr">&quot;brightCyan&quot;</span>: <span class="string">&quot;#16a085&quot;</span>,</span><br><span class="line">            <span class="attr">&quot;brightWhite&quot;</span>: <span class="string">&quot;#fcfcfc&quot;</span>,</span><br><span class="line">            <span class="attr">&quot;background&quot;</span>: <span class="string">&quot;#31363b&quot;</span>,</span><br><span class="line">            <span class="attr">&quot;foreground&quot;</span>: <span class="string">&quot;#eff0f1&quot;</span></span><br><span class="line">        &#125;,</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="attr">&quot;name&quot;</span>: <span class="string">&quot;Whimsy&quot;</span>,</span><br><span class="line">            <span class="attr">&quot;black&quot;</span>: <span class="string">&quot;#535178&quot;</span>,</span><br><span class="line">            <span class="attr">&quot;red&quot;</span>: <span class="string">&quot;#ef6487&quot;</span>,</span><br><span class="line">            <span class="attr">&quot;green&quot;</span>: <span class="string">&quot;#5eca89&quot;</span>,</span><br><span class="line">            <span class="attr">&quot;yellow&quot;</span>: <span class="string">&quot;#fdd877&quot;</span>,</span><br><span class="line">            <span class="attr">&quot;blue&quot;</span>: <span class="string">&quot;#65aef7&quot;</span>,</span><br><span class="line">            <span class="attr">&quot;purple&quot;</span>: <span class="string">&quot;#aa7ff0&quot;</span>,</span><br><span class="line">            <span class="attr">&quot;cyan&quot;</span>: <span class="string">&quot;#43c1be&quot;</span>,</span><br><span class="line">            <span class="attr">&quot;white&quot;</span>: <span class="string">&quot;#ffffff&quot;</span>,</span><br><span class="line">            <span class="attr">&quot;brightBlack&quot;</span>: <span class="string">&quot;#535178&quot;</span>,</span><br><span class="line">            <span class="attr">&quot;brightRed&quot;</span>: <span class="string">&quot;#ef6487&quot;</span>,</span><br><span class="line">            <span class="attr">&quot;brightGreen&quot;</span>: <span class="string">&quot;#5eca89&quot;</span>,</span><br><span class="line">            <span class="attr">&quot;brightYellow&quot;</span>: <span class="string">&quot;#fdd877&quot;</span>,</span><br><span class="line">            <span class="attr">&quot;brightBlue&quot;</span>: <span class="string">&quot;#65aef7&quot;</span>,</span><br><span class="line">            <span class="attr">&quot;brightPurple&quot;</span>: <span class="string">&quot;#aa7ff0&quot;</span>,</span><br><span class="line">            <span class="attr">&quot;brightCyan&quot;</span>: <span class="string">&quot;#43c1be&quot;</span>,</span><br><span class="line">            <span class="attr">&quot;brightWhite&quot;</span>: <span class="string">&quot;#c9c6bd&quot;</span>,</span><br><span class="line">            <span class="comment">//&quot;background&quot;: &quot;#29283b&quot;,</span></span><br><span class="line">            <span class="attr">&quot;foreground&quot;</span>: <span class="string">&quot;#C1C9CA&quot;</span>,</span><br><span class="line">            <span class="attr">&quot;cursorColor&quot;</span>: <span class="string">&quot;#b3b0d6&quot;</span>,</span><br><span class="line">            <span class="attr">&quot;selectionBackground&quot;</span>: <span class="string">&quot;#3d3c58&quot;</span></span><br><span class="line">         &#125;,</span><br><span class="line">         &#123;</span><br><span class="line">            <span class="attr">&quot;name&quot;</span>: <span class="string">&quot;Dracula&quot;</span>,</span><br><span class="line">            <span class="attr">&quot;cursorColor&quot;</span>: <span class="string">&quot;#F8F8F2&quot;</span>,</span><br><span class="line">            <span class="attr">&quot;selectionBackground&quot;</span>: <span class="string">&quot;#44475A&quot;</span>,</span><br><span class="line">            <span class="comment">//&quot;background&quot;: &quot;#282A36&quot;,</span></span><br><span class="line">            <span class="attr">&quot;foreground&quot;</span>: <span class="string">&quot;#9FA7A8&quot;</span>,</span><br><span class="line">            <span class="attr">&quot;black&quot;</span>: <span class="string">&quot;#21222C&quot;</span>,</span><br><span class="line">            <span class="attr">&quot;blue&quot;</span>: <span class="string">&quot;#BD93F9&quot;</span>,</span><br><span class="line">            <span class="attr">&quot;cyan&quot;</span>: <span class="string">&quot;#8BE9FD&quot;</span>,</span><br><span class="line">            <span class="attr">&quot;green&quot;</span>: <span class="string">&quot;#50FA7B&quot;</span>,</span><br><span class="line">            <span class="attr">&quot;purple&quot;</span>: <span class="string">&quot;#FF79C6&quot;</span>,</span><br><span class="line">            <span class="attr">&quot;red&quot;</span>: <span class="string">&quot;#FF5555&quot;</span>,</span><br><span class="line">            <span class="attr">&quot;white&quot;</span>: <span class="string">&quot;#F8F8F2&quot;</span>,</span><br><span class="line">            <span class="attr">&quot;yellow&quot;</span>: <span class="string">&quot;#F1FA8C&quot;</span>,</span><br><span class="line">            <span class="attr">&quot;brightBlack&quot;</span>: <span class="string">&quot;#6272A4&quot;</span>,</span><br><span class="line">            <span class="attr">&quot;brightBlue&quot;</span>: <span class="string">&quot;#D6ACFF&quot;</span>,</span><br><span class="line">            <span class="attr">&quot;brightCyan&quot;</span>: <span class="string">&quot;#A4FFFF&quot;</span>,</span><br><span class="line">            <span class="attr">&quot;brightGreen&quot;</span>: <span class="string">&quot;#5eca89&quot;</span>,</span><br><span class="line">            <span class="attr">&quot;brightPurple&quot;</span>: <span class="string">&quot;#FF92DF&quot;</span>,</span><br><span class="line">            <span class="attr">&quot;brightRed&quot;</span>: <span class="string">&quot;#FF6E6E&quot;</span>,</span><br><span class="line">            <span class="attr">&quot;brightWhite&quot;</span>: <span class="string">&quot;#FFFFFF&quot;</span>,</span><br><span class="line">            <span class="attr">&quot;brightYellow&quot;</span>: <span class="string">&quot;#FFFFA5&quot;</span>,</span><br><span class="line">            <span class="attr">&quot;brightBrown&quot;</span>: <span class="string">&quot;#F1FA8C&quot;</span></span><br><span class="line">         &#125;,</span><br><span class="line">         &#123;</span><br><span class="line">            <span class="attr">&quot;name&quot;</span>: <span class="string">&quot;Violet Dark&quot;</span>,</span><br><span class="line">            <span class="attr">&quot;black&quot;</span>: <span class="string">&quot;#56595c&quot;</span>,</span><br><span class="line">            <span class="attr">&quot;red&quot;</span>: <span class="string">&quot;#c94c22&quot;</span>,</span><br><span class="line">            <span class="attr">&quot;green&quot;</span>: <span class="string">&quot;#85981c&quot;</span>,</span><br><span class="line">            <span class="attr">&quot;yellow&quot;</span>: <span class="string">&quot;#b4881d&quot;</span>,</span><br><span class="line">            <span class="attr">&quot;blue&quot;</span>: <span class="string">&quot;#2e8bce&quot;</span>,</span><br><span class="line">            <span class="attr">&quot;purple&quot;</span>: <span class="string">&quot;#d13a82&quot;</span>,</span><br><span class="line">            <span class="attr">&quot;cyan&quot;</span>: <span class="string">&quot;#32a198&quot;</span>,</span><br><span class="line">            <span class="attr">&quot;white&quot;</span>: <span class="string">&quot;#c9c6bd&quot;</span>,</span><br><span class="line">            <span class="attr">&quot;brightBlack&quot;</span>: <span class="string">&quot;#45484b&quot;</span>,</span><br><span class="line">            <span class="attr">&quot;brightRed&quot;</span>: <span class="string">&quot;#bd3613&quot;</span>,</span><br><span class="line">            <span class="attr">&quot;brightGreen&quot;</span>: <span class="string">&quot;#738a04&quot;</span>,</span><br><span class="line">            <span class="attr">&quot;brightYellow&quot;</span>: <span class="string">&quot;#a57705&quot;</span>,</span><br><span class="line">            <span class="attr">&quot;brightBlue&quot;</span>: <span class="string">&quot;#2176c7&quot;</span>,</span><br><span class="line">            <span class="attr">&quot;brightPurple&quot;</span>: <span class="string">&quot;#c61c6f&quot;</span>,</span><br><span class="line">            <span class="attr">&quot;brightCyan&quot;</span>: <span class="string">&quot;#259286&quot;</span>,</span><br><span class="line">            <span class="attr">&quot;brightWhite&quot;</span>: <span class="string">&quot;#c9c6bd&quot;</span>,</span><br><span class="line">            <span class="attr">&quot;background&quot;</span>: <span class="string">&quot;#1c1d1f&quot;</span>,</span><br><span class="line">            <span class="attr">&quot;foreground&quot;</span>: <span class="string">&quot;#708284&quot;</span>,</span><br><span class="line">            <span class="attr">&quot;cursorColor&quot;</span>: <span class="string">&quot;#708284&quot;</span>,</span><br><span class="line">            <span class="attr">&quot;selectionBackground&quot;</span>: <span class="string">&quot;#595ab7&quot;</span></span><br><span class="line">         &#125;</span><br><span class="line">    ],</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    <span class="comment">// Add custom keybindings to this array.</span></span><br><span class="line">    <span class="comment">// To unbind a key combination from your defaults.json, set the command to &quot;unbound&quot;.</span></span><br><span class="line">    <span class="comment">// To learn more about keybindings, visit https://aka.ms/terminal-keybindings</span></span><br><span class="line">    <span class="attr">&quot;keybindings&quot;</span>:</span><br><span class="line">    [</span><br><span class="line">        <span class="comment">// Copy and paste are bound to Ctrl+Shift+C and Ctrl+Shift+V in your defaults.json.</span></span><br><span class="line">        <span class="comment">// These two lines additionally bind them to Ctrl+C and Ctrl+V.</span></span><br><span class="line">        <span class="comment">// To learn more about selection, visit https://aka.ms/terminal-selection</span></span><br><span class="line">        &#123; <span class="attr">&quot;command&quot;</span>: &#123;<span class="attr">&quot;action&quot;</span>: <span class="string">&quot;copy&quot;</span>, <span class="attr">&quot;singleLine&quot;</span>: <span class="literal">false</span> &#125;, <span class="attr">&quot;keys&quot;</span>: <span class="string">&quot;ctrl+c&quot;</span> &#125;,</span><br><span class="line">        &#123; <span class="attr">&quot;command&quot;</span>: <span class="string">&quot;paste&quot;</span>, <span class="attr">&quot;keys&quot;</span>: <span class="string">&quot;ctrl+v&quot;</span> &#125;,</span><br><span class="line">        &#123; <span class="attr">&quot;command&quot;</span>: <span class="string">&quot;toggleFullscreen&quot;</span>, <span class="attr">&quot;keys&quot;</span>: <span class="string">&quot;alt+enter&quot;</span> &#125;,        </span><br><span class="line">        &#123; <span class="attr">&quot;command&quot;</span>: <span class="literal">null</span>, <span class="attr">&quot;keys&quot;</span>: <span class="string">&quot;f11&quot;</span> &#125;,</span><br><span class="line">        <span class="comment">// Press Ctrl+Shift+F to open the search box</span></span><br><span class="line">        &#123; <span class="attr">&quot;command&quot;</span>: <span class="string">&quot;find&quot;</span>, <span class="attr">&quot;keys&quot;</span>: <span class="string">&quot;ctrl+shift+f&quot;</span> &#125;,</span><br><span class="line"></span><br><span class="line">        <span class="comment">// Press Alt+Shift+D to open a new pane.</span></span><br><span class="line">        <span class="comment">// - &quot;split&quot;: &quot;auto&quot; makes this pane open in the direction that provides the most surface area.</span></span><br><span class="line">        <span class="comment">// - &quot;splitMode&quot;: &quot;duplicate&quot; makes the new pane use the focused pane&#x27;s profile.</span></span><br><span class="line">        <span class="comment">// To learn more about panes, visit https://aka.ms/terminal-panes</span></span><br><span class="line">        &#123; <span class="attr">&quot;command&quot;</span>: &#123; <span class="attr">&quot;action&quot;</span>: <span class="string">&quot;splitPane&quot;</span>, <span class="attr">&quot;split&quot;</span>: <span class="string">&quot;auto&quot;</span>, <span class="attr">&quot;splitMode&quot;</span>: <span class="string">&quot;duplicate&quot;</span> &#125;, <span class="attr">&quot;keys&quot;</span>: <span class="string">&quot;alt+shift+d&quot;</span> &#125;</span><br><span class="line">    ]</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+      
     </div>
-    <!-- async load share.js -->
-     
-    <script type="text/x-mathjax-config">
-    MathJax.Hub.Config({
-        tex2jax: {
-            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
-            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
-            processEscapes: true
-        }
-    });
-    MathJax.Hub.Queue(function() {
-        var all = MathJax.Hub.getAllJax();
-        for (var i = 0; i < all.length; ++i)
-            all[i].SourceElement().parentNode.className += ' has-jax';
-    });
-</script>
-<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2021/03/30/a/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Little Pants">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Little Pants">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2021/03/30/a/" class="post-title-link" itemprop="url">TOI 2021 1! 心得文</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+
+      <time title="Created: 2021-03-30 22:51:47" itemprop="dateCreated datePublished" datetime="2021-03-30T22:51:47+08:00">2021-03-30</time>
+    </span>
+      <span class="post-meta-item">
+        <span class="post-meta-item-icon">
+          <i class="far fa-calendar-check"></i>
+        </span>
+        <span class="post-meta-item-text">Edited on</span>
+        <time title="Modified: 2021-03-31 09:38:29" itemprop="dateModified" datetime="2021-03-31T09:38:29+08:00">2021-03-31</time>
+      </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h2 id="前言">前言</h2>
+<p><del>聽說下禮拜段考，那我就來打個心🉐文好了?</del> 反正總之就是想記錄一下 原本想打在我的網站上，但我架完之放太久就忘記要怎麼用了😢。</p>
+<p>UPD:又學了好久終於學回來了，所以就放上來了</p>
+<h2 id="入營考">入營考</h2>
+<p>去年入營考大概是我第一次接觸到競程比賽，從此之後，我就深深愛上了這種可以申請車馬費去台北玩一天的有趣活動。</p>
+<p>還記的去年的入營考，我和同學一起迷路~~</p>
+<p>以下為回憶片段</p>
+<hr />
+<p>陳昱翔 : 詹挹辰你來台北很多次了，那就給你帶路吧。</p>
+<p>詹挹辰 : 好啊。</p>
+<p>我 : 我們是要去師大還是師大附中啊?</p>
+<p>詹挹辰 : 應該是師大附中吧。</p>
+<p>我 : 反正師大和師大附中應該在隔壁吧?</p>
+<p>(接著我們來到了師大附中)</p>
+<p>我 : 為甚麼這麼多女生阿? 我還以為來考的都會是肥宅ㄟ。</p>
+<p>詹挹辰 : 對阿而且怎麼都看起來像大學生。</p>
+<p>我 : 為甚麼牆壁上貼著多益的海報啊?</p>
+<p>詹挹辰 : ...</p>
+<p>陳昱翔 : ...</p>
+<p>我 : ...</p>
+<p>(後來我馬上叫uber，還好有趕上)</p>
+<hr />
+<p>今年入營考當然就沒有迷路了(但全國賽的時候有)，但是這次考試我特別緊張，因為要是這次入營考如果沒考好，之後的競程生涯可能會受到很大的阻礙，而且這不到一年來的努力有沒有成果就看這一次了。</p>
+<p>比賽結束後，以為自己已經沒希望了，我賽中預估的分數線大概在300，而我只有拿到266分，但看到記分板我才發現好像大家都燒雞了，我這個分數竟然排在第8名。</p>
+<p>但和我一起來的同學成績卻不太理想，連比我強很多的詹挹辰都失常。原本想說可以一起進選訓度假。希望明年可以大家一起進選訓。</p>
+<p>其實我也不覺得我打競程特別有天分，CF打了這麼久也只能勉強上藍，學習新演算法的速度也十分緩慢。感覺我今年能進選訓運氣真的很好。</p>
+<h2 id="選訓營日常">選訓營日常</h2>
+<p>第一次一個人來台北，覺得有點孤單。而且去選訓的電神我也都不太認識，所以我很擔心能不能融入，還好電神們都很nice，不會排斥和菜雞講話。</p>
+<p>我一開始不知道有交誼廳，所以在房間邊緣了2, 3天，後來去洗衣服才發現原來大家都在那。之後就開始了每天下來打桌遊或程式的日常。</p>
+<p>室友是YJU，我和他都是比較不會聊天的類型?所以在房間裡很少講話，反而是在交誼廳玩桌遊的時候講比較多話。和他玩桌遊真的很有趣，因為他超怪。</p>
+<p><img src="https://i.imgur.com/tsCBPT9.png" /></p>
+<p>原本想說要認真上課，後來發現大家都在自己刷題或vir，所以後來我就到處去看電神都在解甚麼然後跟題。</p>
+<p>ZCK直接上台教教授用cdq分治做三維偏序。</p>
+<p><img src="https://i.imgur.com/i6hrfng.png" /></p>
+<p>不知道甚麼時候開始，只要下課時間就會有人開始用大螢幕播動漫，從輝夜姬一路播到情色漫畫老師。</p>
+<p><img src="https://i.imgur.com/t4BNLa6.jpg" /></p>
+<p>下課時間有時候還可以去運動，所以曹宸睿就帶了一群人去跑操場，我原本以為有跑就不錯了，結果被嗆說今年是體育低標。</p>
+<p>後來借了籃球和排球，越來越多人下來運動，再加上2, 4都會有體育課，所以多了資訊奧林匹克這個梗。</p>
+<p>除了體育課，這次還有拼圖課，我們這組很不幸的選到了一幅印象派畫作 <strong>星夜</strong>，一開始覺得顏色很多應該不會太難，後來才發現這個想法真是大錯特錯，把印象派畫作切成1000片來看真的不是人該做的行為。</p>
+<p>後來我們這組拼到心很累，所以索性就把拼圖時間變成了播油歌時間。</p>
+<p><img src="https://i.imgur.com/1KOqXwI.jpg" /></p>
+<p>因為安麗美特就在飯店對面，兩個禮拜去了兩次，買了兩個資料夾和兩本小說，大家都好油喔peko。</p>
+<p>有一天王政祺在交誼廳開播果青，好多人都一起看，結果balbit說出了超多有夠油的發言，我才發現原來他也很油而且是妹控。</p>
+<p>最後幾天開始玩狼人殺，每次都是十幾人局，我之前真的都沒有玩過狼人殺，但不知道為甚麼一直被丟水包。我玩好人的時候都在雷，但玩狼的時候好像都贏?難怪後來大家都不相信我。</p>
+<p>結訓後還跑去王政祺家附近吃拉麵和玩桌遊，balbit和YJU兩個新竹人把原本可以好好合作的遊戲玩的超心機。</p>
+<h2 id="模考">模考　</h2>
+<h3 id="一模">一模</h3>
+<p>31/13/9/100 Rk 11 線上5分</p>
+<p>開始後我馬上花15分鐘讀題並思考可做性，果斷開始想pD，想到暴力把線段拆到線段樹上的做法，雖然覺得有可能會被卡記憶體，但寫線段樹不會花我多少時間，所以就寫下去了。吃了一堆RE(或MLE)之類的東西後，終於AC。</p>
+<p>剩下的題目真的都不太會了，去把pA和pB的部分分拿完之後，看到pC公告發現他是矩陣快速冪。所以果斷開始寫，推出前兩個subtask和矩陣後，剩一個小時。開始猶豫要不要繼續推，但後來還是放棄了，我開始一直在pA, pB中跳來跳去尋找有沒有其他部分分可拿，最後又回去推pC，想到第三個subtask的時候已經來不及了。</p>
+<p>賽後填邪惡表格的時候蠻驚訝自己竟然在線上，但這也讓我更加緊張，原本只是想來度假，但現在卻燃起了一點能盡2!的希望。</p>
+<h3 id="二模">二模</h3>
+<p>37/45/25/19 總Rk 16 線下8分</p>
+<p>一樣先看完所有題目，發現我都完全沒想法，一樣先去看pD，希望和上次一樣是水題，看了很就後雖然覺得可以建凸包砸資結，但不敢繼續想下去，因為我自己知道我賽中應該打不出來。</p>
+<p>所以我開始撈部分分，pD的暴力判斷先撈掉，pA的13分也先撈掉。但現在已經過去兩個小時了，我開始緊張。</p>
+<p>pC和pA都有可以暴力DP的部分分，我都用Top Down亂寫，還好最後有撈到。</p>
+<p>突然想到我都沒撈pB所以也把可以暴力的部分撈掉，然後發現還有28分可以用小學排容，就直接暴力排下去(我弱，我不會莫比烏斯)。</p>
+<p>現在我最簡單的subtask都被我撈完，我決定繼續觀察pA，我把暴力DP的結果印出來慢慢看。</p>
+<p>在最後一分鐘，我看出<span class="math inline">\(n == 1\)</span>的解法，傳上去WA，原來我dubug的輸出沒拔掉，我拔掉之後馬上重傳，結果竟然被上傳間隔擋掉了，不是最後15分鐘不會有上傳限制嗎?我又重複試了幾次，還是沒辦法，這時時間到了，我安慰自己，"沒上2!就沒上吧，畢竟我這場打得這麼爛，應該不會差這12分吧。"</p>
+<p>填邪惡表格的時候我傻眼了，雖然早已有在線下的準備，但我距離線上只差8分，如果我個subtask有拿到的話，如果...，可惜已經沒有如果了，心裡突然湧出滿滿的不甘和懊惱，就差這麼一點進2!，就差這麼一點點。</p>
+<h2 id="總結">總結</h2>
+<p>這次選訓認識了非常多形形色色的電神，原本都只能在FB上看到，現在竟然有機會當面講話，真是開心。我從幾乎完全不認識半個人，到能和大家一起快快樂樂的玩桌遊、看動漫、打程式，只花了兩個禮拜。這兩個禮拜，我體驗到了平常在學校絕對不可能體驗到的生活。這兩個禮拜，絕對是我高中三年最難忘的回憶。</p>
+<p>雖然最後以線下8分結訓，說沒有不甘心是不可能的，但我已經非常滿足，有比我離線上更近的人，也有比我強上很多模考卻燒雞的人，能進到2!的只有12人這個事實不會改變，我只能期待明年自己努力變強，不要卡在2!線上下這個尷尬的位置。</p>
+<h2 id="期許">期許</h2>
+<ol type="1">
+<li>希望選訓的人都會去<span class="math inline">\(IONC\)</span>玩?</li>
+<li>希望今年<span class="math inline">\(ytp\)</span>不要燒雞</li>
+<li>希望明年我們學校初選進更多人</li>
+<li>希望明年大家再來選訓玩</li>
+</ol>
+<h2 id="其他">其他</h2>
+<ol type="1">
+<li><p>今年入營考結束去北車附近打mai，遇到蛋餅和林哲宇。</p></li>
+<li><p>初選第一天，在前往師大的路上看到一家有maimai的店，進去之後竟然又看到蛋餅!?!(雖然我都不敢過去和他講話)，之後又進來了一群電神，還很榮幸的和雞塊打mai。</p></li>
+<li><p>南一中的人都特別會跑操場，尤其是羅文謙Orz，都輕鬆跑10圈。</p></li>
+<li><p>中一中的人字串和狼人殺都特別強。</p></li>
+<li><p>發現大家好像都有看果青?而且貓派大勝利。</p></li>
+<li><p>有一次狼人殺我選到女巫，結果毒死了平民鄭允臻，心結就這樣形成了。</p></li>
+<li><p>歐育淇和<span class="math inline">\(YJU\)</span>都特別會講"好色喔"。</p></li>
+<li><p>FHVirus又帥又強又會FFT又會玩魔方，而且還很愛他妹妹，世界上怎麼會有如此完美的人，好羨慕😭😭。</p></li>
+<li><p>最後幾天<span class="math inline">\(ZCK\)</span>開始看情色漫畫老師(可能是balbit推薦的?)，還一度登上大螢幕，好色喔。</p></li>
+<li><p>雖然不知道🉐是甚麼梗，但跟著🉐就對了。</p></li>
+<li><p>wiwi眼中的YJU</p></li>
+</ol>
+<p>(抱歉 我笑到手抖)</p>
+<p><img src="https://i.imgur.com/0kOjI9f.png" /></p>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+<script src="/js/comments.js"></script>
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+
+<div class="copyright">
+  &copy; 
+  <span itemprop="copyrightYear">2021</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Little Pants</span>
+</div>
+  <div class="powered-by">Powered by <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/" rel="noopener" target="_blank">NexT.Gemini</a>
+  </div>
+
+    </div>
+  </footer>
+
+  
+  <script src="https://cdn.jsdelivr.net/npm/animejs@3.2.1/lib/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
+<script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/next-boot.js"></script>
+
+  
+
+
+
+
+
+
+  
+
+
+
+
+
 </body>
 </html>
-
-
